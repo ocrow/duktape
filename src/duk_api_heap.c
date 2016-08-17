@@ -94,7 +94,7 @@ DUK_EXTERNAL void duk_suspend(duk_context *ctx, duk_thread_state *state) {
 	duk_push_tval(ctx, &lj->value1);
 	duk_push_tval(ctx, &lj->value2);
 
-	DUK_MEMMOVE((void *) &snapshot->lj, (const void *) lj, sizeof(duk_ljstate));
+	DUK_MEMCPY((void *) &snapshot->lj, (const void *) lj, sizeof(duk_ljstate));
 	snapshot->handling_error = heap->handling_error;
 	snapshot->curr_thread = heap->curr_thread;
 	snapshot->call_recursion_depth = heap->call_recursion_depth;
@@ -119,7 +119,7 @@ DUK_EXTERNAL void duk_resume(duk_context *ctx, const duk_thread_state *state) {
 
 	heap = thr->heap;
 
-	DUK_MEMMOVE((void *) &heap->lj, (const void *) &snapshot->lj, sizeof(duk_ljstate));
+	DUK_MEMCPY((void *) &heap->lj, (const void *) &snapshot->lj, sizeof(duk_ljstate));
 	heap->handling_error = snapshot->handling_error;
 	heap->curr_thread = snapshot->curr_thread;
 	heap->call_recursion_depth = snapshot->call_recursion_depth;
