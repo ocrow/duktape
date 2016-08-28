@@ -213,6 +213,7 @@ def main():
     # Options forwarded to genbuiltins.py.
     parser.add_option('--rom-support', dest='rom_support', action='store_true', help='Add support for ROM strings/objects (increases duktape.c size considerably)')
     parser.add_option('--rom-auto-lightfunc', dest='rom_auto_lightfunc', action='store_true', default=False, help='Convert ROM built-in function properties into lightfuncs automatically whenever possible')
+    # FIXME: rename or add alias, e.g. --builtin-metadata
     parser.add_option('--user-builtin-metadata', dest='user_builtin_metadata', action='append', default=[], help='User strings and objects to add, YAML format (can be repeated for multiple overrides)')
 
     # Options forwarded to genconfig.py.
