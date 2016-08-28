@@ -4,6 +4,8 @@
 #  of this directory can then be packaged into a source distributable.
 #
 
+# FIXME: add profiles
+
 import os
 import sys
 import re
@@ -424,8 +426,7 @@ def main():
         'config-options',
         'helper-snippets',
         'header-snippets',
-        'other-defines',
-        'examples'
+        'other-defines'
     ])
     os.chdir(entry_pwd)
 
