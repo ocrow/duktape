@@ -514,7 +514,7 @@ Expression parsing algorithm
 
 The expression parsing algorithm is based on:
 
-* http://javascript.crockford.com/javascript/tdop/tdop.html
+* http://www.crockford.com/javascript/tdop/tdop.html
 
 * http://effbot.org/zone/simple-top-down-parsing.htm
 
